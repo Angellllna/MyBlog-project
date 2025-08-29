@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Мій блог</title>
+</head>
+<body>
+    <h1>Список постів</h1>
+    <ul>
+        {% for post in posts %}
+            <li>
+                <strong>{{ post.title }}</strong> – {{ post.published_date }}
+            </li>
+        {% empty %}
+            <li>Немає постів</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
